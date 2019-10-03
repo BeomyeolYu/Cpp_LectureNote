@@ -1,8 +1,8 @@
-ï»¿/*
-8.1ê°• "ê°ì²´ì§€í–¥ í”„ë¡œê·¸ë˜ë°(Object Oriented Programming)ê³¼ í´ë˜ìŠ¤(Class)"
+/*
+8.1°­ "°´Ã¼ÁöÇâ ÇÁ·Î±×·¡¹Ö(Object Oriented Programming)°ú Å¬·¡½º(Class)"
 
-- Object(ê°ì²´): ë³€ìˆ˜(ë°ì´í„°) ë“¤ê³¼ ê·¸ì™€ ê´€ë ¨ëœ ë©”ì„œë“œ(í•¨ìˆ˜)ë“¤ì´ ëª¨ì—¬ì„œ ì´ë£¬ í•˜ë‚˜ì˜ ê¾¸ëŸ¬ë¯¸ì´ë‹¤.
-- JAVAëŠ” ê°ì²´ ì§€í–¥ë¶€í„° ì‹œì‘í•˜ëŠ” ì–¸ì–´ì´ë‹¤.
+- Object(°´Ã¼): º¯¼ö(µ¥ÀÌÅÍ) µé°ú ±×¿Í °ü·ÃµÈ ¸Ş¼­µå(ÇÔ¼ö)µéÀÌ ¸ğ¿©¼­ ÀÌ·é ÇÏ³ªÀÇ ²Ù·¯¹Ì.
+  [Âü°í] JAVA´Â °´Ã¼ ÁöÇâºÎÅÍ ½ÃÀÛÇÏ´Â ¾ğ¾îÀÌ´Ù.
 */
 
 #include <iostream>
@@ -27,14 +27,14 @@ struct Friend
 	double weight;
 };
 
-void print(const Friend &fr) // í•¨ìˆ˜ì˜ ì´ë¦„ì´ ê°™ì•„ë„ parameterê°€ ë‹¤ë¥´ë©´ overloading ë˜ë¯€ë¡œ ì˜¤ë¥˜ê°€ ì—†ë‹¤.
+void print(const Friend &fr) // ÇÔ¼öÀÇ ÀÌ¸§ÀÌ °°¾Æµµ parameter°¡ ´Ù¸£¸é overloading µÇ¹Ç·Î ¿À·ù°¡ ¾ø´Ù.
 {
 	cout << fr.name << " " << fr.address << " " << fr.age << " " << fr.height << " "
 		<< fr.weight << endl;
 }
 
-// print func.ë„ Friend_ë¼ëŠ” structì˜ memberê°€ ë˜ì—ˆìœ¼ë¯€ë¡œ ë™ì¼í•œ structì˜ memberë“¤ì„ ì§ì ‘ì ìœ¼ë¡œ ì ‘ê·¼í•  ìˆ˜ ìˆë‹¤.
-struct Friend_ // ë°ì´í„°ì™€ ê¸°ëŠ¥ì´ ë¬¶ì—¬ ìˆëŠ” ê²ƒì„ objectë¼ê³  ë¶€ë¥¸ë‹¤. 
+// print func.µµ Friend_¶ó´Â structÀÇ member°¡ µÇ¾úÀ¸¹Ç·Î µ¿ÀÏÇÑ structÀÇ memberµéÀ» Á÷Á¢ÀûÀ¸·Î Á¢±ÙÇÒ ¼ö ÀÖ´Ù.
+struct Friend_ // µ¥ÀÌÅÍ¿Í ±â´ÉÀÌ ¹­¿© ÀÖ´Â °ÍÀ» object¶ó°í ºÎ¸¥´Ù. 
 {
 	string name;
 	string address;
@@ -42,26 +42,26 @@ struct Friend_ // ë°ì´í„°ì™€ ê¸°ëŠ¥ì´ ë¬¶ì—¬ ìˆëŠ” ê²ƒì„ objectë¼ê³  ë¶€ë¥
 	double height;
 	double weight;
 
-	void print() // ìœ„ì˜ const Friend &frì™€ fr.ë¥¼ í†µí•œ ê°„ì ‘ì ì¸ ì ‘ê·¼ì´ ë¶ˆí•„ìš”í•˜ë‹¤.
+	void print() // À§ÀÇ const Friend &fr¿Í fr.¸¦ ÅëÇÑ °£Á¢ÀûÀÎ Á¢±ÙÀÌ ºÒÇÊ¿äÇÏ´Ù.
 	{
 		cout << name << " " << address << " " << age << " " << height << " "
 			<< weight << endl;
 	}
-	// --> structì—ë„ func.ì„ ë„£ì„ ìˆ˜ëŠ” ìˆìœ¼ë‚˜ ë” ë§ì€ ê°ì²´ ì§€í–¥ í”„ë¡œê·¸ë˜ë° ê¸°ë²•ë“¤ì„ ì‚¬ìš©í•  ìˆ˜ ìˆê²Œ í•´ì£¼ëŠ” ê²ƒì´ classì´ë‹¤.
+	// --> struct¿¡µµ func.À» ³ÖÀ» ¼ö´Â ÀÖÀ¸³ª ´õ ¸¹Àº °´Ã¼ ÁöÇâ ÇÁ·Î±×·¡¹Ö ±â¹ıµéÀ» »ç¿ëÇÒ ¼ö ÀÖ°Ô ÇØÁÖ´Â °ÍÀÌ classÀÌ´Ù.
 };
- 
-// ì¼ë°˜ì ìœ¼ë¡œ strctëŠ” ë°ì´í„°ë¥¼ ë¬¶ì„ ë•Œ, classëŠ” ê¸°ëŠ¥ì„ ë¬¶ì„ ë•Œ ì‚¬ìš©í•œë‹¤.
-// strctì˜ ëŒ€í‘œì ì¸ ì°¨ì´: access specifierì˜ ìœ ë¬´.
+
+// ÀÏ¹İÀûÀ¸·Î strct´Â µ¥ÀÌÅÍ¸¦ ¹­À» ¶§, class´Â ±â´ÉÀ» ¹­À» ¶§ »ç¿ëÇÑ´Ù.
+// strctÀÇ ´ëÇ¥ÀûÀÎ Â÷ÀÌ: access specifierÀÇ À¯¹«.
 class Friend_c
 {
-public: // access specifier(ì ‘ê·¼ ì§€ì •ì): pubuic, private, protected 3 ì¢…ë¥˜ê°€ ìˆë‹¤.
-	string m_name;   // êµê³¼ì„œ ìŠ¤íƒ€ì¼: memberë¼ëŠ” ì˜ë¯¸ì˜ m_ì„ ê´€ë¡€ì ìœ¼ë¡œ ë¶™ì¸ë‹¤.
-	string address_; // êµ¬ê¸€ ìŠ¤íƒ€ì¼
-	int	   _age;     // ì˜¤í”ˆì†ŒìŠ¤ ìŠ¤íƒ€ì¼: _ê°€ ì•ì— ìˆì–´ member ì°¾ê¸° ì‰½ë‹¤.
+public: // access specifier(Á¢±Ù ÁöÁ¤ÀÚ): pubuic, private, protected 3 Á¾·ù°¡ ÀÖ´Ù.
+	string m_name;   // ±³°ú¼­ ½ºÅ¸ÀÏ: member¶ó´Â ÀÇ¹ÌÀÇ m_À» °ü·ÊÀûÀ¸·Î ºÙÀÎ´Ù.
+	string address_; // ±¸±Û ½ºÅ¸ÀÏ
+	int	   _age;     // ¿ÀÇÂ¼Ò½º ½ºÅ¸ÀÏ: _°¡ ¾Õ¿¡ ÀÖ¾î member Ã£±â ½±´Ù.
 	double height;
 	double weight;
 
-	void print() 
+	void print()
 	{
 		cout << m_name << " " << address_ << " " << _age << " " << height << " "
 			<< weight << endl;
@@ -71,70 +71,64 @@ public: // access specifier(ì ‘ê·¼ ì§€ì •ì): pubuic, private, protected 3 ì¢…ë
 int main()
 {
 /**************** Topic 1 ****************/
-	string name; // <-- í•˜ë‚˜í•˜ë‚˜ë¥¼ member variableì´ë¼ê³  ë¶€ë¥¸ë‹¤.
-	string address;
-	int	   age;
-	double height;
-	double weight;
+	string name = "Jack Jack"; // <-- ÇÏ³ªÇÏ³ª¸¦ member variableÀÌ¶ó°í ºÎ¸¥´Ù.
+	string address = "Uptown";
+	int	   age = 25;
+	double height = 180;
+	double weight = 80;
 	// ...
 
-	// ì¹œêµ¬ê°€ í•œ ëª…ë§Œ ìˆëŠ” ê²½ìš°
+	// Ä£±¸°¡ ÇÑ ¸í¸¸ ÀÖ´Â °æ¿ì.
 	print(name, address, age, height, weight);
-	// --> ë” ë§ì€ ì¹œêµ¬ë“¤ì— ëŒ€í•œ ë°ì´í„°ë¥¼ ì €ì¥í•  ë•ŒëŠ” arrayë‚˜ ë™ì  í• ë‹¹ ë°°ì—´ ë“±ì„ ì¨ì•¼ í•œë‹¤.
-
+	// --> ´õ ¸¹Àº Ä£±¸µé¿¡ ´ëÇÑ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÒ ¶§´Â array³ª µ¿Àû ÇÒ´ç ¹è¿­ µîÀ» ½á¾ß ÇÑ´Ù.
 
 /**************** Topic 2 ****************/
-	// (1) vectorë¥¼ ì‚¬ìš©í•˜ì—¬ ì¹œêµ¬ ëª©ë¡ ì •ë¦¬.
-	vector<string> name_vec;
-	vector<string> addr_vec;
-	vector<int>	   age_vec;
-	vector<double> height_vec;
-	vector<double> weight_vec;
+	// (1) vector¸¦ »ç¿ëÇÏ¿© Ä£±¸ ¸ñ·Ï Á¤¸®.
+	vector<string> name_vec{ "Jack Jack" };
+	vector<string> addr_vec{ "Uptown" };
+	vector<int>	   age_vec{ 25 };
+	vector<double> height_vec{ 180 };
+	vector<double> weight_vec{ 80 };
 
-	// ì¹œêµ¬ê°€ í•œ ëª…ë§Œ ìˆëŠ” ê²½ìš°
+	// Ä£±¸°¡ ÇÑ ¸í¸¸ ÀÖ´Â °æ¿ì
 	print(name_vec[0], addr_vec[0], age_vec[0], height_vec[0], weight_vec[0]);
-	// --> ì¹œêµ¬ê°€ ë§ì„ ê²½ìš° ë§¤ë²ˆ indexë¥¼ ì§€ì •í•´ì£¼ê¸° ë²ˆê±°ë¡­ê³  ì½”ë“œê°€ ê¸¸ì–´ì§„ë‹¤.
-
+	// --> Ä£±¸°¡ ¸¹À» °æ¿ì ¸Å¹ø index¸¦ ÁöÁ¤ÇØÁÖ±â ¹ø°Å·Ó°í ÄÚµå°¡ ±æ¾îÁø´Ù.
 
 /**************** Topic 3 ****************/
-	// (2) Struct ì‚¬ìš©.
+	// (2) Struct »ç¿ë.
 	Friend JJ;
 
 	// copy initialization
-	JJ.name = "Jack Jack"; // .ëŠ” member selection operator
-	JJ.age = 2;
+	JJ.name = "Jack Jack"; // .´Â member selection operator
+	JJ.age = 20;
 	JJ.address = "Uptown";
 
-	// ë˜ëŠ” uniform initialization <-- ìˆœì„œë¥¼ ë§ì¶°ì£¼ì§€ ì•Šìœ¼ë©´ ì˜¤ë¥˜ ë°œìƒ.
+	// ¶Ç´Â uniform initialization <-- ¼ø¼­¸¦ ¸ÂÃçÁÖÁö ¾ÊÀ¸¸é ¿À·ù ¹ß»ı.
 	Friend jj{ "Jack Jack", "Uptown", 2, 30, 10 };
 
 	print(jj.name, jj.address, jj.age, jj.height, jj.weight);
-	// --> Structë¥¼ ì´ìš©í•´ë„ ë™ì¼í•œ ì¹œêµ¬ê°€ ì¶”ê°€ë˜ë©´ print(so.name, so.address, ...) í•´ì•¼ í•œë‹¤.
-
+	// --> Struct¸¦ ÀÌ¿ëÇØµµ µ¿ÀÏÇÑ Ä£±¸°¡ Ãß°¡µÇ¸é print(so.name, so.address, ...)¸¦ ÇØ¾ß ÇÑ´Ù.
 
 /**************** Topic 4 ****************/
-	// (3) print func.ì˜ parameterë¥¼ í•˜ë‚˜í•˜ë‚˜ ë°›ëŠ” ê²ƒì´ ì•„ë‹ˆë¼ í•˜ë‚˜ì˜ structë¡œ ë°›ëŠ” ë°©ë²•.
+	// (3) print func.ÀÇ parameter¸¦ ÇÏ³ªÇÏ³ª ¹Ş´Â °ÍÀÌ ¾Æ´Ï¶ó ÇÏ³ªÀÇ struct·Î ¹Ş´Â ¹æ¹ı.
 	print(jj);
-	// --> Topic 3ì— ë¹„í•´ì„œ ê¹”ë”í•˜ì§€ë§Œ print func.ì˜ fr.ì´ ë°˜ë³µëœë‹¤.
-
+	// --> Topic 3¿¡ ºñÇØ¼­ ±ò²ûÇÏÁö¸¸ print func.ÀÇ fr.ÀÌ ¹İº¹µÈ´Ù.
 
 /**************** Topic 5 ****************/
-	// (4) print func.ì„ structë¡œ ë§Œë“ ë‹¤.
+	// (4) print func.À» struct·Î ¸¸µç´Ù.
 	Friend_ jj_{ "Jack Jack", "Uptown", 2, 30, 10 };
 	jj_.print();
 
-
 /**************** Topic 6 ****************/
-	// Friend_cë¥¼ classë¡œ ì •ì˜í•˜ëŠ” ê²ƒë§Œìœ¼ë¡œëŠ” ì‘ì—… ê°€ëŠ¥í•œ ë©”ëª¨ë¦¬ë¥¼ ê°–ì§€ ì•ŠëŠ”ë‹¤.
-	// jj_cë¥¼ ì„ ì–¸í•´ì¤˜ì•¼ ë©”ëª¨ë¦¬ê°€ í• ë‹¹ëœë‹¤. --> instantiation
-	Friend_c jj_c{ "Jack Jack", "Uptown", 2, 30, 10 }; // classì˜ instance(ì¸ìŠ¤í„´ìŠ¤)ë¼ê³  ë¶€ë¥¸ë‹¤.
-	
-	jj_c.print();
-	cout << &jj_c << endl; // í”„ë¡œê·¸ë˜ë°ì—ì„œ ì‹¤ì¡´ì˜ ì—¬ë¶€ëŠ” ë©”ëª¨ë¦¬ ì£¼ì†Œê°€ ìˆëŠëƒ ì—†ëŠëƒì´ë‹¤.
+	// Friend_c¸¦ class·Î Á¤ÀÇÇÏ´Â °Í¸¸À¸·Î´Â ÀÛ¾÷ °¡´ÉÇÑ ¸Ş¸ğ¸®¸¦ °®Áö ¾Ê´Â´Ù.
+	// jj_c¸¦ ¼±¾ğÇØÁà¾ß ¸Ş¸ğ¸®°¡ ÇÒ´çµÈ´Ù. --> instantiation
+	Friend_c jj_c{ "Jack Jack", "Uptown", 2, 30, 10 }; // classÀÇ instance(ÀÎ½ºÅÏ½º)¶ó°í ºÎ¸¥´Ù.
 
+	jj_c.print();
+	cout << &jj_c << endl; // ÇÁ·Î±×·¡¹Ö¿¡¼­ ½ÇÁ¸ÀÇ ¿©ºÎ´Â ¸Ş¸ğ¸® ÁÖ¼Ò°¡ ÀÖ´À³Ä ¾ø´À³ÄÀÌ´Ù.
 
 /**************** Topic 7 ****************/
-	// ì¹œêµ¬ê°€ 100ëª…ì¼ ê²½ìš°.
+	// Ä£±¸°¡ 100¸íÀÏ °æ¿ì.
 	vector<Friend_c> my_friends;
 	my_friends.resize(100);
 

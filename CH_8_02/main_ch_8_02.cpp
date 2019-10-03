@@ -30,7 +30,7 @@ public: // access specifiers --> 외부에서 class 안에 있는 member 들에 직접적으로
 
 class Date3
 {
-	// private: defalut
+// private: defalut
 	int m_mouth3;
 	int m_day3;
 	int m_year3;
@@ -65,7 +65,7 @@ public: // 같은 class 안의 member라면, access func.이 public이더라도 private mem
 
 int main()
 {
-	/**************** Topic 1 ****************/
+/**************** Topic 1 ****************/
 	Date1 today1;    // Date1 today {8, 4 ,2025}; 로 초기화 가능.
 	today1.m_mouth1; // struct는 member와 동일한 이름을 선언한다.
 
@@ -73,19 +73,19 @@ int main()
 	today2.m_mouth2; // public access specifiers를 사용하면 가능하다.
 
 	Date3 today3;
-	//today3.m_mouth3; // class의 defalut가 private이므로, class에 선언된 member에 접근할 수 없다.
+	today3.m_mouth3; // class의 defalut가 private이므로, class에 선언된 member에 접근할 수 없다.
 
 
 /**************** Topic 2 ****************/
 	today3.setData(8, 4, 2025);
 	cout << today3.getDay() << endl;// get = 출력.
-
+	
 
 /**************** Topic 3 ****************/
 	// 복사하는 예제.
 	Date3 copy; // today3와 같은 class로부터 만들어진 instance이지만 주소도 다르고 내용도 다르다.
 	copy.copyFrom(today3); // = copy.setData(today3.setMonth(), today3.setDay(), today3.setYear());
-
+	
 
 /**************** Topic 4 ****************/
 	// Encapsulation을 안 하고 전부 public 운영하면 member rename에서 어려움이 생긴다.
