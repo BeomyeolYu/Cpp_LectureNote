@@ -4,9 +4,10 @@
 - C++에서 하나의 class에서 생성된 instance는 각각 독립된 메모리 공간에 저장된 자신만의 멤버 변수를 가지지만, 멤버 함수는 모든 인스턴스가 공유한다.
 */
 
+/**************** Topic 1 ****************/
 class Something1
 {
-public: // Topic 1
+public: 
 	static int s_value; // static 맴버 변수는 주소가 하나뿐이며 같은 class에서 생성된 모든 instance에서 접근이 가능하다.
 	// int s_value;     // <--> non-static 변수와는 성질이 다르다.
 
@@ -17,9 +18,10 @@ public:
 	}
 };
 
+/**************** Topic 2 ****************/
 class Something2
 {
-private: // Topic 2
+private: 
 	static int s_value; 
 	int m_value;
 
@@ -93,7 +95,6 @@ int main()
 	cout << &Something1::s_value << endl; // 주소가 
 	cout << &s1.s_value << endl;          // 동일하다.
 
-
 /**************** Topic 2 ****************/
 	// private:	static int s_value; 일 때,
 	cout << Something2::s_value << endl;    // private으로 선언될 경우에는 instance를 거치지 않고는 직접 접근할 수 없다.
@@ -102,7 +103,6 @@ int main()
 	Something2 s2;
 	cout << s2.getValue() << endl;     // s2.getValue()를 통해서는 s_value에 접근 가능.
 	cout << s2.s_value << endl;        // private의 경우 s_value에 직접 접근이 불가능하며 s2.getValue()를 통해서만 접근이 가능.
-
 
 /**************** Topic 3 ****************/
 	// member func.의 pointer를 가져오는 법 --> member func.은 각 instant에 대해 별개의 주소를 갖는 것이 아니라 공유한다.
@@ -114,7 +114,6 @@ int main()
 	int (*fptr2)() = &Something2::getValue; // 특정 instant로 연결을 안 시켜줘도(= 상관없는 형태로) pointer를 가져온다.
 	cout << fptr2() << endl;
 	
-
 /**************** Topic 4 ****************/
 	// inner class를 이용한 static member variable의 초기화
 	cout << Something3::getValue() << endl;

@@ -9,10 +9,22 @@
 #include <iostream>
 using namespace std;
 
+class Fraction
+{
+public: // Topic 2의 초기화 (1), (2)시에 public으로 바꿔야 함.
+	int m_numerator;
+	int m_denominator;
+
+public:
+	void print()
+	{
+		cout << m_numerator << " / " << m_denominator << endl;
+	}
+};
+
 class Fraction1
 {
- private: // member variable들은 encapsulation 하여 꽁꽁 숨겨놓았다.
-// public: // Topic 2의 초기화 (1), (2)시에 public으로 바꿔야 함.
+private: // member variable들은 encapsulation 하여 꽁꽁 숨겨놓았다.
 	int m_numerator;
 	int m_denominator;
 
@@ -79,43 +91,36 @@ public:
 	{
 		cout << "class First constructor()" << endl;
 	}
-
 };
 
 int main()
 {
 /**************** Topic 1 ****************/
 	// 초기화가 없다면 이상한 값이 할당된다.
-	Fraction1 frac1; 
+	Fraction frac1; 
 	frac1.print(); // -858993460 / -858993460 출력.
-
 
 /**************** Topic 2 ****************/
 	// 초기화 (1): member variable을 public으로 바꾸어 초기화.
-	Fraction1 frac2{ 0, 1 };
+	Fraction frac2{ 0, 1 }; // constructor가 없는 경우.
 
 	// 초기화 (2)
 	frac2.m_numerator = 0;
 	frac2.m_denominator = 1;
 	frac2.print(); // 0 / 1 출력.
 
-
 /**************** Topic 3 ****************/
-	// 초기화 (3): constructor를 이용하여 encapsulation을 유지하면서 초기화
+	// 초기화 (3): constructor를 이용하여 encapsulation을 유지하면서 초기화.
 	Fraction1 frac3; // frac3이 선언됨과 동시에 constructor가 실행된다.
 	frac3.print();
 
-		
 /**************** Topic 4 ****************/
 	/* 주의사항:
 	Fraction frac3(); <-- 생성자도 함수이므로 이처럼 ()가 있어야 한다. 
-	
-	Fraction frac3; <-- 그러나 생성자의 parameter가 하나도 없을 경우에는 ()를 항상 빼도록 되어있다.
-	--> 하나라도 constructor를 만들면 default constructor를 생성하지 않는다.
-	*/
+	Fraction frac3;   <-- 그러나 생성자의 parameter가 하나도 없을 경우에는 ()를 항상 빼도록 되어있다.
+	--> 하나라도 constructor를 만들면 default constructor를 생성하지 않는다. */
 	Fraction2 frac(1,3);
 	frac.print();
-
 
 /**************** Topic 5 ****************/
 	// 초기화하는 방법.
@@ -123,7 +128,6 @@ int main()
 	   (2) Fraction2 frac(1, 3)과 Fraction2 frac{1, 3}의 차이: 
 	       대부분의 경우엔 비슷하나 uniform initialization인 { 1.0, 3 }는 형변환을 허용하지 않으나 ( 1.0, 3 )는 경고만 뜰 뿐 허용한다.  
 		   --> { }이 더 엄격해서 좋다는 평이다. */
-
 
 /**************** Topic 6 ****************/
 	// class 안에 class가 있는 경우.

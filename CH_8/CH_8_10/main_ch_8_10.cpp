@@ -47,7 +47,6 @@ int main()
 	cout << generateID() << endl;
 	cout << generateID() << endl;
 
-
 /**************** Topic 2 ****************/
 	// class를 이용.
 	Something1 st11;
@@ -58,7 +57,6 @@ int main()
 	cout << &st11.m_value << " " << st11.m_value << endl;
 	cout << &st12.m_value << " " << st12.m_value << endl;
 	// --> int로 선언한 경우 주소와 값 모두 다르다.
-
 
 /**************** Topic 3 ****************/
 	// class와 static member variable를 이용.
@@ -76,7 +74,6 @@ int main()
 	Something2::s_value = 1024; /* 또한 instant가 없이도 s_value의 값을 직접 바꿀 수 있다 
 								   --> 메모리에 동적으로 존재하는 것이 아닌 정적으로 존재하기 때문에. */
 	cout << &Something2::s_value << " " << Something2::s_value << endl;
-
 
 /**************** Topic 4 ****************/
 	// static const 또는 static constexpr member variable일 경우.

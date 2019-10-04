@@ -67,20 +67,17 @@ int main()
 	a.print();
 	a.print(); // Constructor와 Destructor가 한 번씩만 실행된다.
 
-
 /**************** Topic 2 ****************/
 	// 한 번의 print 함수 사용을 위하여 a를 선언하는 것이 번거로울 수 있다. 
 	A().print(); // A()는 L-Value가 아닌 R-Value의 역할을 한다.
 	// 그러나, 반복 사용 할 때 Constructor와 Destructor가 매번 실행된다. (= 선언 후 바로 destructor 된다)
 	A().print(); 
 
-
 /**************** Topic 3 ****************/
 	B b(1); // <-- 입력의 위치가 다르다.
 	b.printDouble();
 
 	B(2).printDouble(); // <-- 입력의 위치가 다르다.
-
 
 /**************** Topic 4 ****************/
 	// 예제

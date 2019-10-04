@@ -45,7 +45,7 @@ public:
 
 	void print()
 	{
-		cout << m_i << " " << m_d << " " << m_c << endl;
+		cout << m_i << " " << m_d << " " << m_c;
 		for (auto& e : m_arr)
 			cout << e << " ";
 		cout << endl;

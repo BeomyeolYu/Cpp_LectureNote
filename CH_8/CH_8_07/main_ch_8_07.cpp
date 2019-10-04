@@ -1,9 +1,9 @@
 /*
 8.7강 "this 포인터와 연쇄 호출(Chaining Member Functions)"
 
-- Class를 흔히 붕어빵을 찍는 틀에 비유한다. 
+- class를 흔히 붕어빵을 찍는 틀에 비유한다. 
   Q. 틀 하나(Class)가 여러 개의 붕어빵(instance)을 찍을 때 각 붕어빵을 어떻게 구분할 수 있을까?
-  A. Class 안에 숨어있는 this 포인터와 this 포인터를 이용한 Chaining member functions을 이용한다.
+  A. class 안에 숨어있는 this 포인터와 this 포인터를 이용한 Chaining member functions을 이용한다.
 
 - 연쇄 호출을 권장하는 언어도 있으나 C++에서는 불안한 부분이 있다. 
 */
@@ -71,7 +71,6 @@ int main()
 	--> 미리 선언이 되어있는 Simple의 setID에,
 	    s1의 pointer를 넣어주고,
 		setID에 필요한 parameter 2를 넣어주는 식으로 작동한다. */
-
 
 /**************** Topic 2 ****************/
 	// Chaining Member Functions

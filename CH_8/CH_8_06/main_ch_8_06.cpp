@@ -59,13 +59,11 @@ int main()
 	Simple s1(0);
 	Simple s2(1);
 	
-
 /**************** Topic 2 ****************/
 	// 동적 할당의 경우 Constructor와 동일한 순서로 사라진다: delete 연산으로 메모리 해제를 요청하면 소멸자를 먼저 수행하고 메모리를 해제.
 	Simple *s3 = new Simple(0);
 	Simple s4(1);
 	delete s3;
-
 
 /**************** Topic 3 ****************/
 	// while 문안에서 array를 무한히 생성할 때 delete가 없으면 메모리 누수가 생긴다.
@@ -78,6 +76,5 @@ int main()
 	       --> 소멸자 사용. */
 	}
 	
-
 	return 0;
 }

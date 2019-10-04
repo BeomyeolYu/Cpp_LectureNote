@@ -36,8 +36,8 @@ class Date3
 	int m_year3;
 
 public: // 같은 class 안의 member라면, access func.이 public이더라도 private member를 접근할 수 있다.
-	// setters라고 부른다.
-	void setData(const int& month_input, const int& day_input, const int& year_input)
+	// access func.(1): setters라고 부른다.
+	void setData(const int& month_input, const int& day_input, const int& year_input) 
 	{
 		m_mouth3 = month_input;
 		m_day3 = day_input;
@@ -49,7 +49,7 @@ public: // 같은 class 안의 member라면, access func.이 public이더라도 private mem
 	}
 	// setDay, setYear, ...
 
-	// getters라고 부른다.
+	// access func.(2): getters라고 부른다.
 	const int& getDay() // getDay로 값이 바뀌지 않도록 const로 막아주는 것이 일반적이다. --> 값을 바꾸고 싶다면 setDay 함수를 통하도록.
 	{
 		return m_day3;
@@ -65,30 +65,27 @@ public: // 같은 class 안의 member라면, access func.이 public이더라도 private mem
 
 int main()
 {
-	/**************** Topic 1 ****************/
+/**************** Topic 1 ****************/
 	Date1 today1;    // Date1 today {8, 4 ,2025}; 로 초기화 가능.
 	today1.m_mouth1; // struct는 member와 동일한 이름을 선언한다.
 
-	Date2 today2;
+	Date2 today2;    // class
 	today2.m_mouth2; // public access specifiers를 사용하면 가능하다.
 
-	Date3 today3;
+	Date3 today3;      // class
 	//today3.m_mouth3; // class의 defalut가 private이므로, class에 선언된 member에 접근할 수 없다.
-
 
 /**************** Topic 2 ****************/
 	today3.setData(8, 4, 2025);
 	cout << today3.getDay() << endl;// get = 출력.
-
 
 /**************** Topic 3 ****************/
 	// 복사하는 예제.
 	Date3 copy; // today3와 같은 class로부터 만들어진 instance이지만 주소도 다르고 내용도 다르다.
 	copy.copyFrom(today3); // = copy.setData(today3.setMonth(), today3.setDay(), today3.setYear());
 
-
 /**************** Topic 4 ****************/
-	// Encapsulation을 안 하고 전부 public 운영하면 member rename에서 어려움이 생긴다.
+	// Encapsulation을 안 하고 전부 public 운영하면 member re-name에서 어려움이 생긴다.
 	/* class에 정의된 member의 이름을 바꾸고 싶을 때,
 	   public으로 선언했다면 class 외부에서도 모든 member의 이름을 바꿔주어야 한다. <--public은 외부에서 member의 직접 접근이 가능하므로.
 	   private으로 선언하고 외부에서는 access func.으로 접근한 경우 access func. 등 class 내부에서만 바꿔주면 된다. */

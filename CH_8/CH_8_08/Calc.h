@@ -8,7 +8,6 @@ private:
 	int m_value;
 
 public:
-	
 	/* main .cpp는 간단해졌으나 header file이 간단하지 않으므로 .cpp file을 하나 더 생성하여 분리한다.
    --> 함수 이름 마우스 우 클릭 - Quick Actions and Refactoring - Move Definition Location
    --> 자동으로 lnline으로 선언되므로 필요에 따라 삭제 혹은 유지 
@@ -47,5 +46,4 @@ public:
 		cout << m_value << endl;
 	}
 	*/
-	
 };

@@ -70,12 +70,10 @@ int main()
 	A a;
 	doSomething1(a);
 
-
 /**************** Topic 2 ****************/
 	// class가 2개일 때 모두 접근하는 방법.
 	B b;
 	doSomething2(a, b);
-
 
 /**************** Topic 3 ****************/
 	// class C가 class D의 private member에 접근하는 방법.
