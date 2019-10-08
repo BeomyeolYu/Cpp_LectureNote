@@ -47,25 +47,21 @@ int main()
 	// copy constructor가 호출이 될 필요가 없는 상태.
 	Fraction frac(3, 5);
 	
-
 /**************** Topic 2 ****************/
 	// copy constructor 호출.
 	Fraction frac_copy(frac); // 3과 5가 copy 되기를 기대한다.
 	cout << frac << " " << frac_copy << endl;
-
 
 /**************** Topic 3 ****************/
 	// copy initialize할 때도 copy constructor가 호출된다.
 	Fraction frac_copy1 = frac;
 	cout << frac << " " << frac_copy1 << endl;
 
-
 /**************** Topic 4 ****************/
 	// Fraction을 새로 만들어 대입할 땐 copy constructor가 호출되지 않는다.
 	Fraction frac_copy2(Fraction(3, 10));
 	// = Fraction frac_copy2(3, 10); <-- 컴파일러가 임의로 판단.
 	cout << frac << " " << frac_copy2 << endl;
-
 
 /**************** Topic 5 ****************/
 	// 함수를 이용한 경우 debug mode 일 때는 copy constructor가 호출되지만 release mode에서는 최적화의 이유로 호출되지 않는다.

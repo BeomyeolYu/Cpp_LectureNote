@@ -10,7 +10,7 @@
 
 #include <iostream>
 using namespace std;
-/*---- Topic 1 ----*/
+/**************** Topic 1 ****************/
 class Cents
 {
 private:
@@ -26,14 +26,13 @@ Cents add(const Cents &c1, const Cents &c2)
 	return Cents(c1.getCents() + c2.getCents());
 }
 
-/*---- Topic 2 ----*/
+/**************** Topic 2 ****************/
 Cents operator + (const Cents &c1, const Cents &c2)
 {
 	return Cents(c1.getCents() + c2.getCents());
 }
 
-
-/*---- Topic 3 ----*/
+/**************** Topic 3 ****************/
 class Cents2
 {
 private:
@@ -50,7 +49,7 @@ public:
 	}
 };
 
-/*---- Topic 4 ----*/
+/**************** Topic 4 ****************/
 class Cents3
 {
 private:
@@ -67,7 +66,6 @@ public:
 	}
 };
 
-
 int main()
 {
 /**************** Topic 1 ****************/
@@ -79,18 +77,15 @@ int main()
 	cout << add(cents1, cents2).getCents() << endl;
 	// --> 직관적이지 않은 연산이 수행될 경우에는 이처럼 함수를 사용하는 것이 안전하다.
 
-
 /**************** Topic 2 ****************/
 	// (2) 산술 연산자를 사용하는 방법.
 	cout << (cents1 + cents2).getCents() << endl;
-
 
 /**************** Topic 3 ****************/
 	// (3) friend func.을 이용하는 방법.
 	Cents2 cents3(6);
 	Cents2 cents4(8);
 	cout << (cents3 + cents4 + Cents2(2)).getCents() << endl;
-
 
 /**************** Topic 4 ****************/
 	// (4) member func.으로 구현. 

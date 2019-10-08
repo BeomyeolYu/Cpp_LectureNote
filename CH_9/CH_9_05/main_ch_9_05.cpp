@@ -52,14 +52,12 @@ int main()
 	cout << a++ << endl;
 	cout << a << endl;
 
-
 /**************** Topic 2 ****************/
 	Digit d(10);
 	cout << ++d << endl;
 	cout << d << endl;
 	cout << d++ << endl;
 	cout << d << endl;
-
 
 	return 0;
 }

@@ -45,7 +45,6 @@ int main()
 		cout << "Equal" << endl;
 	cout << std::boolalpha;
 
-
 /**************** Topic 2 ****************/
 	// Sorting ¿¹Á¦
 	vector<Cents> arr(20);

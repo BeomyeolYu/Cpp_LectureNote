@@ -52,7 +52,6 @@ int main()
 	value = int(cent);
 	value = static_cast<int>(cent);
 
-
 /**************** Topic 2 ****************/
 	// Dollar를 Cents로 형변환하는 예제.
 	Dollar dol(2);

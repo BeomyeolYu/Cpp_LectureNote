@@ -55,12 +55,10 @@ int main()
 	my_list.getList()[3] = 10;
 	cout << my_list.getList()[3] << endl;
 
-
 /**************** Topic 2 ****************/
 	// 번거로운 ()가 없어지도록 오버로딩.
 	my_list[3] = 10;
 	cout << my_list[3] << endl;
-
 
 /**************** Topic 3 ****************/
 	// const version에서 []를 호출해야 하는 경우.
@@ -68,13 +66,11 @@ int main()
 	my_list1[3] = 10; // const version이므로 값을 바꿀 수 없다.
 	cout << my_list1[3] << endl; // const version이라도 읽을 수는 있어야 하는데 오류 발생 --> const version operator 생성.
 
-
 /**************** Topic 4 ****************/
 	// 가장 중요한 부분: cassert를 쓰는 것이 좋다.
 	/* Q. if 문을 사용하면 되지 굳이 assert를 써야 하느냐?
 	   A. subscript operator는 굉장히 많이 사용하려고 만듦으로 속도가 생명이다.
 	   --> if 문을 지양하고 assert를 사용하여 성능을 높이고 디버깅을 깔끔하게 하도록 구현. */
-
 
 /**************** Topic 5 ****************/
 	// IntList 자체를 pointer 형태로 사용할 때 주의할 점.

@@ -43,7 +43,6 @@ int main()
 	cout << -cents1 << endl;
 	cout << -Cents(-10) << endl;
 
-
 /**************** Topic 2 ****************/
 	// not operator는 return type이 bool이다.
 	cout << !a << endl;

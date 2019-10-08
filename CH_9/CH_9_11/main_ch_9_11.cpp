@@ -140,7 +140,6 @@ int main()
 
 	// 결론: 동적 메모리 할당을 사용하는 경우에는 멤버에 포인터가 있으므로 copy constructor나 assignment operator를 오버로딩할 때 주의가 필요하다.
 
-
 /**************** Topic 2 ****************/
 	// Deep copy: 메모리 주소를 새로 할당받고 복사한다.
 	MyString1 hello1("Hello"); 
@@ -152,7 +151,6 @@ int main()
 		cout << copy1.getSring() << endl;	
 	} 
 	cout << hello1.getSring() << endl; 
-
 
 /**************** Topic 3 ****************/
 	// 대입 연산자 오버로딩 또한 copy constructor와 개념은 유사하지만 차이점이 존재한다.

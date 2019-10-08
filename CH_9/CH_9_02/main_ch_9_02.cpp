@@ -50,13 +50,11 @@ int main()
 	Point p1(0.0, 0.1, 0.2), p2(3.4, 1.5, 2.0);
 	cout << p1 << " " << p2 << endl;
 
-
 /**************** Topic 2 ****************/
 	// file로 출력(of).
 	ofstream of("out.txt");
 	of << p1 << " " << p2 << endl;
 	of.close();
-
 
 /**************** Topic 3 ****************/
 	// 입력: ostream --> istream

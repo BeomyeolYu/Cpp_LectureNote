@@ -76,7 +76,6 @@ int main()
 	doSomething(Fraction(7));
 	doSomething(7);	// 7만 넣어도 기본값 1과 함께 출력된다. = Converting constructor
 
-
 /**************** Topic 2 ****************/
 	// explicit을 사용하면 명확하게 입력해준 경우에만 작동한다.
 	Fraction1 frac1(7);
@@ -84,7 +83,6 @@ int main()
 	doSomething1(frac1);
 	doSomething1(Fraction1(7));
 	doSomething1(7); // 입력이 하나인 경우에 사용할 수 없다.
-
 
 /**************** Topic 3 ****************/
 	// delete: 주의 깊게 프로그래밍할 때 사용된다.
